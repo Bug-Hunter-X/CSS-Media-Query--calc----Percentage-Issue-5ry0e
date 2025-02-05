@@ -1,0 +1,19 @@
+The solution avoids using `calc()` and `%` within the media query condition:
+
+```css
+/* Using vw units (viewport width) */
+@media (max-width: 900px) { /* Example width; adjust as needed */
+  .element {
+    width: 50%;
+  }
+}
+
+/* Alternative: Removing calc() entirely */
+@media (max-width: 900px) {
+  .element {
+    width: 50%;
+  }
+}
+```
+
+This approach utilizes a fixed pixel value (e.g., `900px`) in the media query.  You would adjust the pixel value based on your desired breakpoint. Using `vw` units is also a suitable alternative and would be responsive based on the viewport width.
